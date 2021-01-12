@@ -4,9 +4,12 @@ import {selectAllPokemon} from './../../reducers/selectors';
 import PokemonIndex from './pokemon_index';
 
 
-const mapStateToProps = state => ({
+const mapStateToProps = state => {
+  // debugger
+  return({
   pokemon: selectAllPokemon(state)
-})
+  })
+}
 
 const mapDispatchToProps = dispatch => ({
   requestAllPokemon: () => dispatch(requestAllPokemon())
